@@ -1,5 +1,3 @@
-var config = require('./config.json');
-
 Meteor.myGeoFunctions = {
     geocodeStation : function(station, callback){
         myGeoCoder(theAddress, callback);
@@ -16,7 +14,7 @@ var myGeoCoder = function(address, callback){
     var geo = new GeoCoder({
         geocoderProvider: "google",
         httpAdapter: "https",
-        apiKey: config.google.apiKey
+        apiKey: google[apiKey]
     });
     var result = geo.geocode(theAddress);
     var retVal = {};
